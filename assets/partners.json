@@ -1,0 +1,323 @@
+{
+  "source": "https://re-leuchtet.de/",
+  "updatedAt": "2026-10-27",
+  "groups": [
+    {
+      "title": "Eine Veranstaltung von",
+      "partners": [
+        {
+          "group": "Eine Veranstaltung von",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/08/Altstadt_Logo_DGS_quer-L-1.jpg",
+          "href": "http://www.altstadt.re/",
+          "name": "Altstadt Recklinghausen",
+          "src": "assets/partner/01-altstadt-recklinghausen.jpg",
+          "bytes": 45954
+        },
+        {
+          "group": "Eine Veranstaltung von",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/08/RE_Ru_Logo_160-Kopie-2.jpg",
+          "href": "https://www.recklinghausen.de/Inhalte/Startseite/index.asp",
+          "name": "Stadt Recklinghausen",
+          "src": "assets/partner/02-stadt-recklinghausen.jpg",
+          "bytes": 24223
+        },
+        {
+          "group": "Eine Veranstaltung von",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2022/09/arena-logo.png",
+          "href": "http://www.arena-recklinghausen.de/",
+          "name": "ARENA Recklinghausen",
+          "src": "assets/partner/03-arena-recklinghausen.png",
+          "bytes": 21940
+        }
+      ]
+    },
+    {
+      "title": "Sponsoren & Partner",
+      "partners": [
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/08/02_sparkasse.jpg",
+          "href": "https://www.sparkasse-leben.de/",
+          "name": "Sparkasse",
+          "src": "assets/partner/04-sparkasse.jpg",
+          "bytes": 6727
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/09/westenergie_logo_p_RGB-1024x186.png",
+          "href": "https://www.westenergie.de/de.html",
+          "name": "Westenergie",
+          "src": "assets/partner/05-westenergie.png",
+          "bytes": 10508
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/08/03_volksbank.png",
+          "href": "https://www.vb-marl-recklinghausen.de/privatkunden.html",
+          "name": "Volksbank Marl-Recklinghausen",
+          "src": "assets/partner/06-volksbank-marl-recklinghausen.png",
+          "bytes": 2389
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2025/10/Knappschaft-Kliniken-logo-1.png",
+          "href": "https://www.knappschaft-kliniken.de/",
+          "name": "Knappschaft Kliniken",
+          "src": "assets/partner/07-knappschaft-kliniken.png",
+          "bytes": 3353
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/08/04_palais.png",
+          "href": "https://www.palais-vest.de/",
+          "name": "Palais Vest",
+          "src": "assets/partner/08-palais-vest.png",
+          "bytes": 3479
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/AWS-x-Audi-Print.png",
+          "href": "https://www.autowelt-schmidt.de/audi",
+          "name": "Autowelt Schmidt / Audi",
+          "src": "assets/partner/09-autowelt-schmidt-audi.png",
+          "bytes": 6298
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/10/logo_goevert_immobilien.jpg",
+          "href": "https://www.goevert-immobilien.de/",
+          "name": "Goevert Immobilien",
+          "src": "assets/partner/10-goevert-immobilien.jpg",
+          "bytes": 9086
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/10/stadtwerke_RE.png",
+          "href": "https://www.stadtwerke-recklinghausen.de/",
+          "name": "Stadtwerke Recklinghausen",
+          "src": "assets/partner/11-stadtwerke-recklinghausen.png",
+          "bytes": 7094
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "Logo Dr. Schlotmann",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2022/09/Dr-schlotmann-Logo-1024x336.png",
+          "href": "https://www.dr-schlotmann.de/",
+          "name": "Dr. Schlotmann",
+          "src": "assets/partner/12-dr-schlotmann.png",
+          "bytes": 9691
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2025/10/Fahrschule-Cem-Logo-2.png",
+          "href": "https://fahrschule-cem.com/",
+          "name": "Fahrschule Cem",
+          "src": "assets/partner/13-fahrschule-cem.png",
+          "bytes": 4192
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/loeseke_logo-1024x247.png",
+          "href": "https://www.loesekes-steingarten.de/",
+          "name": "Loesekes Steingarten",
+          "src": "assets/partner/14-loesekes-steingarten.png",
+          "bytes": 10949
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/waaga_schwarz.png",
+          "href": "https://kfzwaaga.de/",
+          "name": "Kfz Waaga",
+          "src": "assets/partner/15-kfz-waaga.png",
+          "bytes": 3719
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/AXA_Logo-1024x1024.jpeg",
+          "href": "https://www.axa-betreuer.de/michael_hoeffelmann",
+          "name": "AXA Michael Hoeffelmann",
+          "src": "assets/partner/16-axa-michael-hoeffelmann.jpeg",
+          "bytes": 32364
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/Logo_Rawebundh_schwarz.png",
+          "href": "https://rawe-gmbh.com/",
+          "name": "Rawe",
+          "src": "assets/partner/17-rawe.png",
+          "bytes": 6261
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/08/05_ostermann.png",
+          "href": "https://www.ostermann.de/recklinghausen",
+          "name": "Ostermann",
+          "src": "assets/partner/18-ostermann.png",
+          "bytes": 4205
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2023/10/Westfaelische_Hochschule_Gelsenkirchen_Bocholt_Recklinghausen_Logo-1024x283.png",
+          "href": "https://www.w-hs.de/recklinghausen/",
+          "name": "Westfälische Hochschule",
+          "src": "assets/partner/19-westfalische-hochschule.png",
+          "bytes": 11380
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2023/10/medienhaus_Bauer-logo-1024x168.png",
+          "href": "https://medienhaus-bauer.de/",
+          "name": "Medienhaus Bauer",
+          "src": "assets/partner/20-medienhaus-bauer.png",
+          "bytes": 6777
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2025/10/wws_logo.png",
+          "href": "https://www.wws-security.de/",
+          "name": "WWS Security",
+          "src": "assets/partner/21-wws-security.png",
+          "bytes": 2470
+        },
+        {
+          "group": "Sponsoren & Partner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/rewe_engelhardt_logo_2x-1.png",
+          "href": "https://www.rewe-engelhardt.de/",
+          "name": "REWE Engelhardt",
+          "src": "assets/partner/22-rewe-engelhardt.png",
+          "bytes": 7094
+        }
+      ]
+    },
+    {
+      "title": "Partner der Gastronomie",
+      "partners": [
+        {
+          "group": "Partner der Gastronomie",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2023/09/Metro_4c.png",
+          "href": "https://www.metro.de/",
+          "name": "METRO",
+          "src": "assets/partner/23-metro.png",
+          "bytes": 2124
+        },
+        {
+          "group": "Partner der Gastronomie",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2023/09/1_BECKS_4c_2z.png",
+          "href": "https://becks.de/",
+          "name": "Beck’s",
+          "src": "assets/partner/24-becks.png",
+          "bytes": 14376
+        },
+        {
+          "group": "Partner der Gastronomie",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2023/09/doerlemann-schwarz.png",
+          "href": "https://kornbrennerei-doerlemann.de/",
+          "name": "Kornbrennerei Dörlemann",
+          "src": "assets/partner/25-kornbrennerei-dorlemann.png",
+          "bytes": 31086
+        },
+        {
+          "group": "Partner der Gastronomie",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2023/09/Logo_Molitor.png",
+          "href": "https://www.wein-molitor.de/",
+          "name": "Wein Molitor",
+          "src": "assets/partner/26-wein-molitor.png",
+          "bytes": 16647
+        },
+        {
+          "group": "Partner der Gastronomie",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2023/09/Spitzer-Welt.png",
+          "href": "https://www.spitzer-gastro.de/",
+          "name": "Spitzer",
+          "src": "assets/partner/27-spitzer.png",
+          "bytes": 33303
+        }
+      ]
+    },
+    {
+      "title": "Kooperationspartner",
+      "partners": [
+        {
+          "group": "Kooperationspartner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/08/Panirama_Logo.png",
+          "href": "http://www.panirama.de",
+          "name": "www.panirama.de",
+          "src": "assets/partner/28-www-panirama-de.png",
+          "bytes": 25391
+        },
+        {
+          "group": "Kooperationspartner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/cclogo2026.jpg",
+          "href": "https://www.crosscreative.de/",
+          "name": "Crosscreative",
+          "src": "assets/partner/29-crosscreative.jpg",
+          "bytes": 4243
+        },
+        {
+          "group": "Kooperationspartner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2020/08/SMD-Entertainment--1024x341.png",
+          "href": "https://www.facebook.com/SMD-Entertainment-221375744547898/",
+          "name": "SMD Entertainment",
+          "src": "assets/partner/30-smd-entertainment.png",
+          "bytes": 36576
+        },
+        {
+          "group": "Kooperationspartner",
+          "alt": "MGNFY Logo",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2022/09/21_MGNFY_Logo_red.png",
+          "href": "https://www.mgnfy.com/",
+          "name": "MGNFY",
+          "src": "assets/partner/31-mgnfy.png",
+          "bytes": 8460
+        },
+        {
+          "group": "Kooperationspartner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/regiofreizeit-logo-1024x557.png",
+          "href": "https://www.regiofreizeit.de/",
+          "name": "regiofreizeit",
+          "src": "assets/partner/32-regiofreizeit.png",
+          "bytes": 10219
+        },
+        {
+          "group": "Kooperationspartner",
+          "alt": "",
+          "source": "https://re-leuchtet.de/wp-content/uploads/2026/10/Prinz-Studios-Logo-Black.png",
+          "href": "https://prinzstudios.com/",
+          "name": "Prinz Studios",
+          "src": "assets/partner/33-prinz-studios.png",
+          "bytes": 15407
+        }
+      ]
+    }
+  ]
+}
