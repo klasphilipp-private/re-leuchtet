@@ -101,6 +101,71 @@
     return '';
   }
 
+  function enhanceSelect(select) {
+    if (select.dataset.enhanced) return;
+    select.dataset.enhanced = 'true';
+    const wrapper = element('div', 'custom-select');
+    select.before(wrapper); wrapper.append(select); select.hidden = true;
+    const label = document.querySelector(`label[for="${select.id}"]`);
+    label.id = `${select.id}-label`;
+    const trigger = element('button', 'select-trigger'); trigger.type = 'button';
+    trigger.id = `${select.id}-trigger`;
+    trigger.setAttribute('role', 'combobox'); trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('aria-labelledby', label.id); trigger.setAttribute('aria-expanded', 'false');
+    const list = element('div', 'select-options'); list.id = `${select.id}-options`;
+    list.setAttribute('role', 'listbox'); list.setAttribute('aria-labelledby', label.id); list.hidden = true;
+    trigger.setAttribute('aria-controls', list.id); wrapper.append(trigger, list);
+    let options = [];
+    function sync() {
+      trigger.textContent = select.selectedOptions[0]?.textContent || '';
+      options.forEach((button, index) => button.setAttribute('aria-selected', String(select.selectedIndex === index)));
+    }
+    function close(focus = false) { list.hidden = true; trigger.setAttribute('aria-expanded', 'false'); if (focus) trigger.focus(); }
+    function open(index = select.selectedIndex) {
+      document.dispatchEvent(new CustomEvent('select-close', {detail: trigger.id}));
+      list.hidden = false; trigger.setAttribute('aria-expanded', 'true');
+      options[Math.max(0, index)]?.focus({preventScroll:true});
+      options[Math.max(0, index)]?.scrollIntoView({block:'nearest'});
+    }
+    function rebuild() {
+      options = Array.from(select.options, (option, index) => {
+        const button = element('button', 'select-option', option.textContent); button.type = 'button';
+        button.setAttribute('role', 'option'); button.tabIndex = -1;
+        button.addEventListener('click', () => { select.selectedIndex = index; sync(); close(true); select.dispatchEvent(new Event('change', {bubbles:true})); });
+        return button;
+      });
+      list.replaceChildren(...options); sync();
+    }
+    trigger.addEventListener('click', () => list.hidden ? open() : close());
+    trigger.addEventListener('keydown', event => {
+      if (['ArrowDown','ArrowUp','Home','End'].includes(event.key)) {
+        event.preventDefault(); open(event.key === 'End' ? options.length - 1 : event.key === 'Home' ? 0 : select.selectedIndex);
+      }
+    });
+    let typed = ''; let typedAt = 0;
+    list.addEventListener('keydown', event => {
+      const index = options.indexOf(document.activeElement);
+      let next = index;
+      if (event.key === 'ArrowDown') next = Math.min(index + 1, options.length - 1);
+      else if (event.key === 'ArrowUp') next = Math.max(index - 1, 0);
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = options.length - 1;
+      else if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); close(true); return; }
+      else if (event.key === 'Tab') { close(); return; }
+      else if (event.key.length === 1 && !event.ctrlKey && !event.metaKey && event.key !== ' ') {
+        const now = Date.now(); typed = now - typedAt < 700 ? typed + event.key : event.key; typedAt = now;
+        const found = options.findIndex(option => P.normalizeText(option.textContent).startsWith(P.normalizeText(typed)));
+        if (found >= 0) next = found;
+      } else return;
+      event.preventDefault(); options[next]?.focus();
+    });
+    document.addEventListener('click', event => { if (!wrapper.contains(event.target)) close(); });
+    document.addEventListener('select-close', event => { if (event.detail !== trigger.id) close(); });
+    select.addEventListener('select-sync', sync); select.addEventListener('change', sync);
+    label.addEventListener('click', event => { event.preventDefault(); trigger.focus(); });
+    new MutationObserver(rebuild).observe(select, {childList:true}); rebuild();
+  }
+
   function programmePage() {
     const form = $('#programme-filters');
     const results = $('#programme-results');
@@ -115,6 +180,7 @@
       Object.keys(controls).forEach(name => {
         if (name === 'place' && filters.place && !Array.from(controls.place.options).some(option => option.value === filters.place)) controls.place.add(new Option(filters.place, filters.place));
         controls[name].value = filters[name];
+        controls[name].dispatchEvent(new Event('select-sync'));
       });
     }
     function readControls() {
@@ -175,8 +241,12 @@
         details.append(detailLink);
         card.append(dateBlock, details);
         if (image) {
-          const photo = picture(image, event.title, 'programme', 'result-picture');
-          if (photo) card.append(photo);
+          const photo = element('a', 'result-picture');
+          photo.href = href;
+          photo.setAttribute('aria-label', `${event.title} – Details ansehen`);
+          const thumbnail = element('img');
+          thumbnail.src = assetUrl(image); thumbnail.alt = event.title; thumbnail.loading = 'lazy';
+          photo.append(thumbnail); card.append(photo);
         }
         fragment.append(card);
       });
@@ -191,6 +261,7 @@
         controls.place.replaceChildren(new Option('Alle Orte', ''));
         places.forEach(place => controls.place.add(new Option(place, place)));
         ready = true;
+        form.querySelectorAll('select').forEach(enhanceSelect);
         fillControls();
         render();
       } catch (_) {

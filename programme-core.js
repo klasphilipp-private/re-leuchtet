@@ -43,17 +43,18 @@
     return params.toString();
   }
   function costType(occurrence) {
-    if (['free', 'paid', 'unknown'].includes(occurrence.costType)) return occurrence.costType;
+    if (occurrence.costType === 'unknown') return 'free';
+    if (['free', 'paid'].includes(occurrence.costType)) return occurrence.costType;
     if (occurrence.isFree === true || occurrence.costType === 'free') return 'free';
     if (occurrence.isFree === false || occurrence.costType === 'paid') return 'paid';
     const price = String(occurrence.price || '').trim();
     if (/^(kostenlos|kostenfrei|eintritt frei|frei|0(?:[,.]00)?\s*€?)$/i.test(price)) return 'free';
     if (/\d/.test(price) && /€|euro/i.test(price) && !/^0(?:[,.]00)?\s*(€|euro)$/i.test(price)) return 'paid';
-    return 'unknown';
+    return 'free';
   }
   function priceLabel(occurrence) {
     const type = costType(occurrence);
-    if (type === 'free' && !occurrence.price) return 'Eintritt frei';
+    if (type === 'free' && (!occurrence.price || /keine angabe/i.test(occurrence.price))) return 'kostenlos';
     if (occurrence.price) return String(occurrence.price);
     return type === 'paid' ? 'Kostenpflichtig' : 'Eintritt: keine Angabe';
   }
