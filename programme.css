@@ -19,3 +19,5 @@
 .select-option[aria-selected=true]{font-weight:750;background:var(--lavender)}
 .select-option:hover,.select-option:focus{background:#e5dcf1;outline:2px solid #a32a72;outline-offset:-2px}
 @media(max-width:520px){.select-trigger,.select-option{font-size:16px}}
+.occurrence-picker .select-trigger{font-size:16px;line-height:1.7;min-height:58px;padding-top:14px;padding-bottom:14px}
+@media(max-width:520px){.occurrence-picker .select-trigger{font-size:15px}}

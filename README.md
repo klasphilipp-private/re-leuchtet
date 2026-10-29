@@ -9,3 +9,5 @@ Stand 29. Oktober 2026: 87 Veranstaltungen mit 204 Terminen, kombinierbare Filte
 Eigenständige responsive Gestaltung mit Originalinhalten und Originalbildern von re-leuchtet.de. Die bestehende Festivalwebsite bleibt unverändert. Veröffentlichung über GitHub Pages aus main /.
 
 Vorschau v8: überarbeitete Filter-Dropdowns, gleich große Datumszeile, Programmbilder als Detail-Links, Clubraum-Karte, mobile Logos untereinander und vollständiger Footer mit eigener Seite für Impressum und Datenschutz. Fehlende Eintrittsangaben gelten auf Vorgabe des Nutzers als kostenlos.
+
+Vorschau v9: gemeinsame Termin-Dropdowns, weiße Social-Media-Icons, weiße Footerzeile mit Original-Regiostart-Logo und Mail-Link, eigener statischer Clubraum-Lageplan und 300 px breite Partnerlogos.

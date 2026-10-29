@@ -316,6 +316,7 @@
     function renderOccurrence(occurrence) {
       selected = occurrence;
       selector.value = occurrence.id || occurrence.start;
+      selector.dispatchEvent(new Event('select-sync'));
       $('#event-date').textContent = P.dateLabel(occurrence.start);
       $('#event-selected-date').textContent = P.lastDay(occurrence) === P.firstDay(occurrence) ? `${P.dateLabel(occurrence.start)} · ${P.timeLabel(occurrence.start)} Uhr` : `${P.dateLabel(occurrence.start)} bis ${P.shortDate(`${P.lastDay(occurrence)}T12:00:00+01:00`)}`;
       $('#event-time').textContent = occurrence.end ? `${P.timeLabel(occurrence.start)} – ${P.timeLabel(occurrence.end)} Uhr` : `${P.timeLabel(occurrence.start)} Uhr · Endzeit nicht angegeben`;
@@ -400,6 +401,7 @@
           const option = new Option(`${P.shortDate(occurrence.start)}${range} · ${P.timeLabel(occurrence.start)} Uhr · ${P.priceLabel(occurrence)}`, occurrence.id || occurrence.start);
           selector.add(option);
         });
+        enhanceSelect(selector);
         const requested = params.get('termin');
         const occurrence = P.selectOccurrence(event, requested, new Date());
         const exact = !requested || ordered.some(item => item.id === requested || item.start === requested || new Date(item.start).valueOf() === new Date(requested).valueOf());

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-labelledby="title desc">
+<title id="title">Lageplan Sparkassen-Clubraum</title><desc id="desc">Der Clubraum liegt an der Augustinessenstraße 2a neben dem Agora, westlich des Kirchplatzes von St. Peter. Schematische Orientierungskarte, nicht maßstabsgetreu.</desc>
+<rect width="720" height="460" rx="20" fill="#f3effa"/>
+<g fill="#e1d8ef" stroke="#d0c4e0" stroke-width="2"><path d="M155 45h165v80H155z"/><path d="M350 45h120v66H350z"/><path d="M115 210l143 50-28 96-135-48z"/><path d="M365 280l70 25-30 110-75-30z"/><path d="M515 316h145v95H515z"/></g>
+<path d="M0 105Q110 110 190 148T440 245L720 278" fill="none" stroke="white" stroke-width="38"/>
+<path d="M110 0Q75 175 32 460M315 460l44-174M490 0l-50 245 75 215M100 45l620 0" fill="none" stroke="white" stroke-width="28"/>
+<path d="M455 107h231v130H455z" fill="#e4edf7"/>
+<g font-family="Arial,sans-serif" fill="#4c4b6e" font-size="16"><text x="154" y="161" transform="rotate(20 154 161)">Augustinessenstraße</text><text x="350" y="385" transform="rotate(-76 350 385)">Sterngasse</text><text x="68" y="330" transform="rotate(-80 68 330)">Herzogswall</text><text x="504" y="300">Holzmarkt</text><text x="350" y="37">Im Rom</text></g>
+<g fill="#b0c8a4"><path d="M125 343l100 35-20 65-102-30z"/></g>
+<g fill="#c9b7dc" stroke="#b29bc9" stroke-width="2"><path d="M562 113h31v58h25v28h-81v-28h25z"/></g>
+<g font-family="Arial,sans-serif" text-anchor="middle" fill="#4c4b6e"><text x="577" y="222" font-size="17">St. Peter · Kirchplatz</text><text x="161" y="396" font-size="13">Petrinum</text></g>
+<path d="M368 131h58v64h-58z" fill="#f4c4dc" stroke="#ac2875" stroke-width="2"/>
+<g font-family="Arial,sans-serif"><rect x="201" y="66" width="247" height="51" rx="10" fill="#111a40"/><text x="324" y="88" text-anchor="middle" fill="white" font-size="17" font-weight="700">Sparkassen-Clubraum</text><text x="324" y="106" text-anchor="middle" fill="#e8d9f3" font-size="12">Augustinessenstraße 2a</text></g>
+<path d="M398 116c-17 0-30 13-30 30 0 22 30 50 30 50s30-28 30-50c0-17-13-30-30-30z" fill="#b51c72" stroke="white" stroke-width="4"/><circle cx="398" cy="146" r="9" fill="white"/>
+<text x="437" y="184" font-family="Arial,sans-serif" fill="#4c4b6e" font-size="14">Agora</text>
+<g transform="translate(665 51)" fill="#111a40" font-family="Arial,sans-serif"><path d="M0 35l9-26 9 26-9-6z"/><text x="9" y="0" text-anchor="middle" font-size="14" font-weight="700">N</text></g>
+<text x="24" y="440" font-family="Arial,sans-serif" fill="#665a78" font-size="12">Schematischer Lageplan · nicht maßstabsgetreu</text>
+</svg>

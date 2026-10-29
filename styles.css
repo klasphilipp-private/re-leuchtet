@@ -95,3 +95,20 @@ html{scroll-padding-top:100px}
 .legal-copy p,.legal-copy ul{margin:20px 0}
 .legal-copy ul{padding-left:24px}
 @media(max-width:640px){.partner-list,.partner-list.organizers{grid-template-columns:1fr}.footer-source{grid-template-columns:1fr;gap:24px}.footer-social{flex-direction:row;flex-wrap:wrap;gap:20px}.site-footer .footer-bottom{flex-direction:column;gap:20px}.competition-closing{margin-top:44px}.legal-copy{font-size:16px}.legal-copy h2{font-size:25px}}
+/* Footer review: white social icons and a full-width white credit row. */
+.site-footer{padding-bottom:0}
+.footer-social{flex-direction:row;align-items:center;justify-content:flex-end;gap:24px}
+.footer-social a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;color:#fff;border-radius:8px}
+.footer-social svg{display:block;width:28px;height:28px;fill:currentColor}
+.footer-social a:hover{background:#ffffff18}
+.footer-social a:focus-visible{outline:2px solid white;outline-offset:4px}
+.footer-credit-bar{background:#fff;color:var(--navy-deep)}
+.site-footer .footer-bottom{border-top:0;padding-top:28px;padding-bottom:28px;align-items:center}
+.site-footer .footer-bottom p,.site-footer .footer-bottom a{color:var(--navy-deep)}
+.footer-credit{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.footer-credit a{display:block;line-height:0}
+.footer-credit img{display:block;width:190px;max-width:100%;height:auto}
+.club-map .club-location-map{display:block;width:100%;height:auto;border-radius:16px}
+.partner-list .partner-logo,.partner-list.organizers .partner-logo{height:100%;min-height:170px;padding:24px 12px}
+.partner-list .partner-logo img,.partner-list.organizers .partner-logo img{width:300px;max-width:100%;height:auto;max-height:none;object-fit:contain;flex:none}
+@media(max-width:640px){.footer-social{justify-content:flex-start}.footer-credit{gap:12px}.site-footer .footer-bottom{align-items:flex-start}}
