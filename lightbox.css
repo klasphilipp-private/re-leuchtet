@@ -1,0 +1,20 @@
+.photo-viewer-open{overflow:hidden}
+.re-lightbox{position:fixed;inset:0;width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:hidden;color:white}
+.re-lightbox::backdrop{background:rgba(0,0,0,.94)}
+.re-lightbox-stage{display:flex;align-items:center;justify-content:center;width:100%;height:100%;margin:0;padding:40px 64px;pointer-events:none}
+.re-lightbox-image{display:block;width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain;border:0;border-radius:0!important;box-shadow:none;pointer-events:auto;opacity:0;transition:opacity .16s ease;touch-action:pan-y pinch-zoom}
+.re-lightbox-image.is-loaded{opacity:1}
+.re-lightbox-image[hidden]{display:none}
+.re-lightbox-close,.re-lightbox-prev,.re-lightbox-next{position:absolute;display:flex;align-items:center;justify-content:center;margin:0;padding:0;min-width:44px;min-height:44px;border:0;border-radius:0;background:transparent;color:#fff;opacity:.72;cursor:pointer;transition:opacity .15s ease}
+.re-lightbox-close:hover,.re-lightbox-prev:hover,.re-lightbox-next:hover,.re-lightbox-close:focus-visible,.re-lightbox-prev:focus-visible,.re-lightbox-next:focus-visible{opacity:1}
+.re-lightbox-close{right:22px;top:3px;font-family:Arial,sans-serif;font-size:34px;font-weight:400;line-height:1}
+.re-lightbox-prev,.re-lightbox-next{top:50%;width:52px;height:76px;transform:translateY(-50%)}
+.re-lightbox-prev{left:10px}.re-lightbox-next{right:10px}
+.re-lightbox-prev svg,.re-lightbox-next svg{width:19px;height:32px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:square;stroke-linejoin:miter;filter:drop-shadow(0 1px 3px #000)}
+.re-lightbox button[hidden],.re-lightbox-count[hidden],.re-lightbox-error[hidden]{display:none}
+.re-lightbox-count{position:absolute;bottom:6px;right:64px;margin:0;font:13px/1.8 Arial,sans-serif;color:#ddd}
+.re-lightbox-description{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.re-lightbox-error{position:absolute;inset:45% 24px auto;text-align:center;font:16px/1.6 Arial,sans-serif;color:white}
+.re-lightbox button:focus-visible{outline:2px solid white;outline-offset:-4px}
+@media(max-width:640px){.re-lightbox-stage{padding:48px 12px}.re-lightbox-close{right:7px;top:2px}.re-lightbox-prev,.re-lightbox-next{width:40px;min-width:36px;height:60px;background:#0002}.re-lightbox-prev{left:0}.re-lightbox-next{right:0}.re-lightbox-prev svg,.re-lightbox-next svg{width:14px;height:26px}.re-lightbox-count{right:14px;bottom:9px}}
+@media(prefers-reduced-motion:reduce){.re-lightbox-image,.re-lightbox button{transition:none!important}}

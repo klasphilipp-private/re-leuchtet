@@ -1,19 +1,9 @@
-# Recklinghausen leuchtet – Website-Vorschau
+# Recklinghausen leuchtet – Designvorschau
 
-Statische responsive Vorschau der Website für Recklinghausen leuchtet 2026.
+Öffentliche Vorschau: https://klasphilipp-private.github.io/re-leuchtet/
 
-Enthält Original-Header und Motto, ein transparentes und beim Scrollen kompaktes Menü, Tagesprogramm, interaktive Karte, Stadtführungen, Clubraum-Flyer, Fotowettbewerb, Masonry-Galerie, Anreise sowie die Original-Logos der Partner.
+Programm: https://klasphilipp-private.github.io/re-leuchtet/programm/
 
-Die Dateien im Repository-Stamm werden mit GitHub Pages von `main` veröffentlicht. HTML, CSS und JavaScript benötigen keinen Build-Schritt. Alle Pfade funktionieren auch unter `/re-leuchtet/`.
+Stand 29. Oktober 2026: 87 Veranstaltungen mit 204 Terminen, kombinierbare Filter und eigene Detailseiten, Vollbild-Bildansicht, direkt verlinkte Partnerlogos in den vier Originalgruppen. Die Daten sind ein Quellstand der Festivalwebsite vom 29.10.2026, keine laufende WordPress-Synchronisierung.
 
-## Medien und Inhalte
-
-Festivalinhalte und Originalmedien: https://re-leuchtet.de/
-
-Wettbewerbsfotos: https://abo.recklinghaeuser-zeitung.de/re-leuchtet/
-
-Original-Karte: https://maps.regiofreizeit.de/client?applicationId=6970&center=801369.4597521442%3B6730730.132901544&zoom=8&layers=OSM+regiofreizeit%3BGrenze+Emscher-Lippe%3BStationen+RE+leuchtet
-
-`assets/partners.json` dokumentiert die Original-Logos und Linkziele. `assets/events.json` ist ein Snapshot der veröffentlichten Veranstaltungstermine vom 27. Oktober 2026; das heutige Datum wird im Browser für Europe/Berlin ermittelt. Nach redaktionellen Terminänderungen muss der Snapshot aktualisiert werden.
-
-Die Medien bleiben Eigentum der jeweiligen Rechteinhaber. Dieses Repository veröffentlicht die vom Projektinhaber beauftragte Vorschau; es erteilt keine zusätzlichen Nutzungsrechte für Dritte.
+Eigenständige responsive Gestaltung mit Originalinhalten und Originalbildern von re-leuchtet.de. Die bestehende Festivalwebsite bleibt unverändert. Veröffentlichung über GitHub Pages aus main /.

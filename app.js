@@ -66,60 +66,6 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-const dialog = document.querySelector('.image-dialog');
-const dialogImage = dialog.querySelector('.dialog-image');
-const caption = dialog.querySelector('.dialog-caption');
-const count = dialog.querySelector('.dialog-count');
-const previousButton = dialog.querySelector('.dialog-prev');
-const nextButton = dialog.querySelector('.dialog-next');
-const closeButton = dialog.querySelector('.dialog-close');
-let imageGroup = [];
-let imageIndex = 0;
-let imageOpener = null;
-
-function showImage(index) {
-  imageIndex = index;
-  const link = imageGroup[imageIndex];
-  dialogImage.src = link.href;
-  dialogImage.alt = link.querySelector('img')?.alt || link.dataset.caption || link.textContent.trim();
-  dialog.classList.toggle('is-logo', link.dataset.gallery === 'foerderer' || link.dataset.gallery?.startsWith('partner-'));
-  caption.textContent = link.dataset.caption || dialogImage.alt;
-  count.textContent = imageGroup.length > 1 ? `${imageIndex + 1} / ${imageGroup.length}` : 'Originalansicht';
-  previousButton.disabled = imageIndex === 0;
-  nextButton.disabled = imageIndex === imageGroup.length - 1;
-}
-document.querySelectorAll('[data-lightbox]').forEach((link) => {
-  if (!link.hasAttribute('aria-label')) {
-    link.setAttribute('aria-label', `${link.querySelector('img')?.alt || 'Bild'} – vergrößern`);
-  }
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-});
-document.addEventListener('click', (event) => {
-  const link = event.target.closest('[data-lightbox]');
-  if (!link || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || typeof dialog.showModal !== 'function') return;
-  event.preventDefault();
-  imageOpener = link;
-  imageGroup = Array.from(document.querySelectorAll('[data-lightbox]')).filter((item) => item.dataset.gallery === link.dataset.gallery);
-  showImage(imageGroup.indexOf(link));
-  dialog.showModal();
-  document.body.classList.add('dialog-open');
-  closeButton.focus();
-});
-closeButton.addEventListener('click', () => dialog.close());
-previousButton.addEventListener('click', () => { if (imageIndex > 0) showImage(imageIndex - 1); });
-nextButton.addEventListener('click', () => { if (imageIndex < imageGroup.length - 1) showImage(imageIndex + 1); });
-dialog.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowLeft' && imageIndex > 0) { event.preventDefault(); showImage(imageIndex - 1); }
-  if (event.key === 'ArrowRight' && imageIndex < imageGroup.length - 1) { event.preventDefault(); showImage(imageIndex + 1); }
-});
-dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
-dialog.addEventListener('close', () => {
-  document.body.classList.remove('dialog-open');
-  dialogImage.removeAttribute('src');
-  imageOpener?.focus();
-});
-
 // Occurrences are compared to the current calendar date in the festival's timezone.
 const timeZone = 'Europe/Berlin';
 const programmeDate = document.getElementById('programme-today');
@@ -177,7 +123,11 @@ function renderProgramme(force = false) {
     const details = makeElement('div');
     const title = makeElement('h3');
     const link = makeElement('a', 'programme-title-link', event.title);
-    link.href = typeof event.url === 'string' && /^https?:\/\//.test(event.url) ? event.url : 'https://re-leuchtet.de/programm';
+    const detail = new URL('veranstaltung/', document.baseURI);
+    detail.searchParams.set('id', event.groupId || '');
+    detail.searchParams.set('termin', event.start);
+    detail.searchParams.set('back', new URLSearchParams({ date: today, period: 'all' }).toString());
+    link.href = detail.href;
     title.append(link);
     details.append(title);
     if (event.place) details.append(makeElement('p', '', event.place));
