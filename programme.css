@@ -21,3 +21,5 @@
 @media(max-width:520px){.select-trigger,.select-option{font-size:16px}}
 .occurrence-picker .select-trigger{font-size:16px;line-height:1.7;min-height:58px;padding-top:14px;padding-bottom:14px}
 @media(max-width:520px){.occurrence-picker .select-trigger{font-size:15px}}
+
+.js .seo-event-content{display:none}.seo-event-content{margin:40px 0}.seo-event-content h2{font-size:28px;margin-bottom:24px}.seo-event-content h3{font-size:22px;margin:40px 0 16px}.seo-event-content p{margin-bottom:22px}.seo-event-content ul{padding-left:24px;line-height:2}

@@ -99,10 +99,10 @@
     return ordered.find(occurrence => lastDay(occurrence) >= dateKey(now || new Date())) || ordered[ordered.length - 1] || null;
   }
   function detailUrl(id, start, query, base) {
-    const params = new URLSearchParams({ id: String(id) });
+    const params = new URLSearchParams();
     if (start) params.set('termin', start);
     if (query) params.set('back', query.replace(/^\?/, ''));
-    return `${base || 'veranstaltung/'}?${params}`;
+    return `${base || 'veranstaltung/'}${encodeURIComponent(id)}.html${params.size ? `?${params}` : ''}`;
   }
   function mapsUrl(occurrence) {
     if (safeUrl(occurrence.mapsUrl)) return safeUrl(occurrence.mapsUrl);

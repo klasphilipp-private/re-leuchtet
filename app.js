@@ -123,8 +123,7 @@ function renderProgramme(force = false) {
     const details = makeElement('div');
     const title = makeElement('h3');
     const link = makeElement('a', 'programme-title-link', event.title);
-    const detail = new URL('veranstaltung/', document.baseURI);
-    detail.searchParams.set('id', event.groupId || '');
+    const detail = new URL(`veranstaltung/${encodeURIComponent(event.groupId)}.html`, document.baseURI);
     detail.searchParams.set('termin', event.start);
     detail.searchParams.set('back', new URLSearchParams({ date: today, period: 'all' }).toString());
     link.href = detail.href;

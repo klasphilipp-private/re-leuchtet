@@ -11,3 +11,5 @@ Eigenständige responsive Gestaltung mit Originalinhalten und Originalbildern vo
 Vorschau v8: überarbeitete Filter-Dropdowns, gleich große Datumszeile, Programmbilder als Detail-Links, Clubraum-Karte, mobile Logos untereinander und vollständiger Footer mit eigener Seite für Impressum und Datenschutz. Fehlende Eintrittsangaben gelten auf Vorgabe des Nutzers als kostenlos.
 
 Vorschau v9: gemeinsame Termin-Dropdowns, weiße Social-Media-Icons, weiße Footerzeile mit Original-Regiostart-Logo und Mail-Link, eigener statischer Clubraum-Lageplan und 300 px breite Partnerlogos.
+
+Vorschau v10: Original-Favicon und Apple-Touch-Icon, individuelle SEO- und Social-Media-Metadaten, Header-Titelmotiv auf allen Seiten, 87 direkt abrufbare Veranstaltungsseiten, strukturierte Daten und Sitemap unter sitemap.xml.

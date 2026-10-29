@@ -284,7 +284,7 @@
 
   function eventPage() {
     const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
+    const id = document.body.dataset.eventId || params.get('id');
     const state = $('#event-state');
     const content = $('#event-content');
     const selector = $('#occurrence-select');
@@ -391,7 +391,16 @@
           return;
         }
         $('#event-title').textContent = event.title;
-        document.title = `${event.title} · Recklinghausen leuchtet`;
+        document.title = `${event.title} | Recklinghausen leuchtet 2026`;
+        const canonical = document.querySelector('link[rel="canonical"]');
+        const seoRoot = new URL('../', canonical.href);
+        canonical.href = new URL(`veranstaltung/${encodeURIComponent(event.id)}.html`, seoRoot).href;
+        const summary = (event.summary || event.occurrences[0].description || event.title).replace(/\s+/g, ' ').trim();
+        const description = summary.length <= 157 ? summary : summary.slice(0, 154).replace(/\s+\S*$/, '') + '…';
+        document.querySelector('meta[name="description"]').content = description;
+        ['og:title', 'twitter:title'].forEach(name => document.querySelector(`meta[property="${name}"],meta[name="${name}"]`).content = document.title);
+        ['og:description', 'twitter:description'].forEach(name => document.querySelector(`meta[property="${name}"],meta[name="${name}"]`).content = description);
+        document.querySelector('meta[property="og:url"]').content = canonical.href;
         $('#event-summary').textContent = event.summary || '';
         $('#event-summary').hidden = !event.summary;
         const ordered = event.occurrences.slice().sort((a, b) => new Date(a.start) - new Date(b.start));
